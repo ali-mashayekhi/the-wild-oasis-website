@@ -11,17 +11,17 @@ function ReservationReminder() {
   if (!range.from || !range.to) return null;
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 py-5 px-8 rounded-full bg-accent-500 text-primary-800 text  font-semibold shadow-xl shadow-slate-900 flex gap-8 items-center">
+    <div className="fixed flex items-center gap-8 px-8 py-5 font-semibold -translate-x-1/2 rounded-full shadow-xl bottom-6 left-1/2 bg-accent-500 text-primary-800 text shadow-slate-900">
       <p>
-        <span>👋</span> Don'f forget to reserve your dates <br /> from{" "}
+        <span>👋</span> Don&apos;f forget to reserve your dates <br /> from{" "}
         {format(new Date(range.from), "MMM dd yyyy")} to{" "}
         {format(new Date(range.to), "MMM dd yyyy")}
       </p>
       <button
-        className="rounded-full p-1 hover:bg-accent-600 transition-all"
+        className="p-1 transition-all rounded-full hover:bg-accent-600"
         onClick={resetRange}
       >
-        <XMarkIcon className="h-5 w-5" />
+        <XMarkIcon className="w-5 h-5" />
       </button>
     </div>
   );
